@@ -1,0 +1,617 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+        <link rel="stylesheet" href="style.css">
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+    <link rel="stylesheet" href= "https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+
+    <title>REGISTER</title>
+    <style media="screen">
+
+.bg-nav{
+      background: #396afc;  /* fallback for old browsers */
+      background: -webkit-linear-gradient(to bottom, #2948ff, #396afc);  /* Chrome 10-25, Safari 5.1-6 */
+      background: linear-gradient(to bottom, #2948ff, #396afc); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+    }
+.right{
+  float: right;
+  margin-right: 2px;
+
+}
+.left{
+  float: left;
+  padding-right: 5px;
+  margin-right: 10px;
+
+}
+.search{
+  text-align: center;
+  margin-left: 350px;
+  margin-top: 100px;
+  margin-right: 100px;
+
+}
+#in{
+  width: 600px;
+}
+.top{
+  margin-bottom: 50px;
+  margin-top: 50px;
+}
+.list-group-item:hover{
+  background-color: #ffff00;
+  color: #212121;
+}
+.list-group{
+  background-color: #212121;
+}
+
+@import url(http://fonts.googleapis.com/css?family=Indie+Flower);
+/*
+	A. Mini Reset
+*/
+*, *:after, *:before { -webkit-box-sizing: border-box; -moz-box-sizing: border-box; box-sizing: border-box; }
+
+* {
+  margin: 0;
+  padding: 0;
+}
+
+::before,
+::after {
+	content: "";
+}
+
+
+
+ul {
+	margin: 0;
+	padding: 0;
+	list-style: none;
+}
+
+
+
+/*
+	1. container
+*/
+
+.book {
+	position: relative;
+	width: 160px;
+	height: 220px;
+	-webkit-perspective: 1000px;
+	-moz-perspective: 1000px;
+	perspective: 1000px;
+	-webkit-transform-style: preserve-3d;
+	-moz-transform-style: preserve-3d;
+	transform-style: preserve-3d;
+  margin-left: 250px;
+  margin-bottom: 60px;
+  margin-top: 30px;
+}
+
+/*
+	2. background & color
+*/
+
+/* HARDCOVER FRONT */
+
+.paperback_front {
+	background-color: #000;
+}
+
+.paperback_front::after{
+	background-image: -webkit-linear-gradient( -135deg, rgba(255, 255, 255, 0.45) 0%, transparent 100%);
+	background-image: -moz-linear-gradient( -135deg, rgba(255, 255, 255, 0.45) 0%, transparent 100%);
+	background-image: linear-gradient( -135deg, rgba(255, 255, 255, 0.45) 0%, transparent 100%);
+	position: absolute;
+	top: 0;
+	left: 0;
+	bottom: 0;
+	right: 0;
+}
+
+.paperback_back {
+	background-color: #333;
+}
+
+/* page */
+
+.ruled_paper > li {
+	background-color: #fff;
+	background-image: -webkit-linear-gradient(rgba(200, 200, 200, 0.1) 0.1em, transparent 0.1em), -webkit-linear-gradient(left, #e1ddd8 0%, #fffbf6 100%);
+	background-image: -moz-linear-gradient(rgba(200, 200, 200, 0.1) 0.1em, transparent 0.1em), -moz-linear-gradient(left, #e1ddd8 0%, #fffbf6 100%);
+	background-image: -ms-linear-gradient(rgba(200, 200, 200, 0.1) 0.1em, transparent 0.1em), -moz-linear-gradient(left, #e1ddd8 0%, #fffbf6 100%);
+	background-image: linear-gradient(rgba(200, 200, 200, 0.1) 0.1em, transparent 0.1em), linear-gradient(left, #e1ddd8 0%, #fffbf6 100%);
+	background-size: 100% 0.6em;
+	box-shadow: inset 0px -1px 2px rgba(50, 50, 50, 0.1), inset -1px 0px 1px rgba(150, 150, 150, 0.2);
+	border-radius: 0px 10px 10px 0px;
+}
+
+/*
+	3. opening cover, back cover and pages
+*/
+
+.paperback_front {
+	-webkit-transform: rotateY(-38deg) translateZ(0px);
+	-moz-transform: rotateY(-38deg) translateZ(0px);
+	transform: rotateY(-38deg) translateZ(0px);
+	z-index: 100;
+}
+
+.paperback_back {
+	-webkit-transform: rotateY(-25deg);
+	-moz-transform: rotateY(-25deg);
+	transform: rotateY(-25deg);
+}
+
+.ruled_paper li:nth-child(1) {
+	-webkit-transform: rotateY(-27deg);
+	-moz-transform: rotateY(-27deg);
+	transform: rotateY(-27deg);
+}
+
+.ruled_paper li:nth-child(2) {
+	-webkit-transform: rotateY(-29deg);
+	-moz-transform: rotateY(-29deg);
+	transform: rotateY(-29deg);
+}
+
+.ruled_paper li:nth-child(3) {
+	-webkit-transform: rotateY(-31deg);
+	-moz-transform: rotateY(-31deg);
+	transform: rotateY(-31deg);
+}
+
+.ruled_paper li:nth-child(4) {
+	-webkit-transform: rotateY(-33deg);
+	-moz-transform: rotateY(-33deg);
+	transform: rotateY(-33deg);
+}
+
+.ruled_paper li:nth-child(5) {
+	-webkit-transform: rotateY(-35deg);
+	-moz-transform: rotateY(-35deg);
+	transform: rotateY(-35deg);
+}
+
+/*
+	4. position, transform y transition
+*/
+
+.paperback_front,
+.paperback_back,
+.paperback_front li,
+.paperback_back li {
+	border-radius: 2px 8px 8px 2px;
+	position: absolute;
+	top: 0;
+	left: 0px;
+	width: 100%;
+	height: 100%;
+	-webkit-transform-style: preserve-3d;
+	-moz-transform-style: preserve-3d;
+	transform-style: preserve-3d;
+}
+
+.paperback_front,
+.paperback_back {
+	-webkit-transform-origin: 0% 100%;
+	-moz-transform-origin: 0% 100%;
+	transform-origin: 0% 100%;
+}
+
+.paperback_front{
+	-webkit-transition: all 0.5s ease, z-index 0.6s;
+	-moz-transition: all 0.5s ease, z-index 0.6s;
+	transition: all 0.5s ease, z-index 0.6s;
+}
+
+.paperback_front li img,
+.paperback_back li img {
+	border-radius: 2px 8px 8px 2px;
+	position: absolute;
+	top: 0;
+	left: 0;
+}
+
+/* Ruled paper */
+
+.ruled_paper,
+.ruled_paper > li {
+	position: absolute;
+	-webkit-transform-style: preserve-3d;
+	-moz-transform-style: preserve-3d;
+	transform-style: preserve-3d;
+}
+
+.ruled_paper {
+	width: 98%;
+	height: 98%;
+	top: 1%;
+	left: 1%;
+	z-index: 10;
+}
+
+.ruled_paper > li {
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 100%;
+}
+
+.ruled_paper > li {
+	-webkit-transform-origin: left center;
+	-moz-transform-origin: left center;
+	transform-origin: left center;
+	-webkit-transition-property: transform;
+	-moz-transition-property: transform;
+	transition-property: transform;
+	-webkit-transition-timing-function: ease;
+	-moz-transition-timing-function: ease;
+	transition-timing-function: ease;
+}
+
+.ruled_paper li:nth-child(1) {
+	-webkit-transition-duration: 0.6s;
+	-moz-transition-duration: 0.6s;
+	transition-duration: 0.6s;
+}
+
+.ruled_paper li:nth-child(2) {
+	-webkit-transition-duration: 0.6s;
+	-moz-transition-duration: 0.6s;
+	transition-duration: 0.6s;
+}
+
+.ruled_paper li:nth-child(3) {
+	-webkit-transition-duration: 0.4s;
+	-moz-transition-duration: 0.4s;
+	transition-duration: 0.4s;
+}
+
+.ruled_paper li:nth-child(4) {
+	-webkit-transition-duration: 0.5s;
+	-moz-transition-duration: 0.5s;
+	transition-duration: 0.5s;
+}
+
+.ruled_paper li:nth-child(5) {
+	-webkit-transition-duration: 0.5s;
+	-moz-transition-duration: 0.5s;
+	transition-duration: 0.5s;
+}
+
+/*
+	5. events
+*/
+
+.book:hover > .paperback_front {
+	-webkit-transform: rotateY(-125deg) translateZ(0px);
+	-moz-transform: rotateY(-125deg) translateZ(0px);
+	transform: rotateY(-125deg) translateZ(0px);
+	z-index: 0;
+}
+
+.book:hover > .ruled_paper li:nth-child(1) {
+	-webkit-transform: rotateY(-30deg);
+	-moz-transform: rotateY(-30deg);
+	transform: rotateY(-30deg);
+	-webkit-transition-duration: 1.5s;
+	-moz-transition-duration: 1.5s;
+	transition-duration: 1.5s;
+}
+
+.book:hover > .ruled_paper li:nth-child(2) {
+	-webkit-transform: rotateY(-35deg);
+	-moz-transform: rotateY(-35deg);
+	transform: rotateY(-35deg);
+	-webkit-transition-duration: 1.8s;
+	-moz-transition-duration: 1.8s;
+	transition-duration: 1.8s;
+}
+
+.book:hover > .ruled_paper li:nth-child(3) {
+	-webkit-transform: rotateY(-110deg);
+	-moz-transform: rotateY(-110deg);
+	transform: rotateY(-110deg);
+	-webkit-transition-duration: 2.2s;
+	-moz-transition-duration: 2.2s;
+	transition-duration: 2.2s;
+}
+
+.book:hover > .ruled_paper li:nth-child(4) {
+	-webkit-transform: rotateY(-115deg);
+	-moz-transform: rotateY(-115deg);
+	transform: rotateY(-115deg);
+	-webkit-transition-duration: 1.8s;
+	-moz-transition-duration: 1.8s;
+	transition-duration: 1.8s;
+}
+
+.book:hover > .ruled_paper li:nth-child(5) {
+	-webkit-transform: rotateY(-120deg);
+	-moz-transform: rotateY(-120deg);
+	transform: rotateY(-120deg);
+	-webkit-transition-duration: 1.2s;
+	-moz-transition-duration: 1.2s;
+	transition-duration: 1.2s;
+}
+
+/* Cover colors */
+.green {
+	background: #2ecc71;
+}
+
+.red {
+	background: #cb0000;
+}
+
+/*
+	6. Bonus
+*/
+
+/* Basic ribbon */
+
+.ribbon{
+	background: #c0392b;
+	color: #fff;
+	display: block;
+	font-size: 0.7em;
+	position: absolute;
+	top: 11px;
+	right: 1px;
+	width: 40px;
+	height: 20px;
+	line-height: 20px;
+	letter-spacing: 0.15em;
+	text-align: center;
+	-webkit-transform: rotateZ(45deg) translateZ(1px);
+	-moz-transform: rotateZ(45deg) translateZ(1px);
+	transform: rotateZ(45deg) translateZ(1px);
+	-webkit-backface-visibility: hidden;
+	-moz-backface-visibility: hidden;
+	backface-visibility: hidden;
+	z-index: 10;
+}
+
+.ribbon::before,
+.ribbon::after{
+	position: absolute;
+	top: -20px;
+	width: 0;
+	height: 0;
+	border-bottom: 20px solid #c0392b;
+	border-top: 20px solid transparent;
+}
+
+.ribbon::before{
+	left: -20px;
+	border-left: 20px solid transparent;
+}
+
+.ribbon::after{
+	right: -20px;
+	border-right: 20px solid transparent;
+}
+
+/* figcaption */
+
+figcaption {
+	padding-left: 40px;
+	text-align: left;
+	position: absolute;
+	top: 0%;
+	left: 160px;
+	width: 310px;
+	-webkit-backface-visibility: hidden;
+  margin-bottom: 10px;
+}
+
+figcaption h1 {
+	margin: 0px;
+}
+figcaption h4 {
+	margin-bottom: :10px;;
+}
+figcaption h6 {
+	margin-bottom: :10px;;
+}
+
+
+figcaption span {
+	color: #16a085;
+	padding: 0.6em 0 1em 0;
+	display: block;
+}
+
+figcaption p {
+	color: #63707d;
+	line-height: 1.3;
+  margin-bottom: 10px;
+}
+
+/* Media Queries */
+@media screen and (max-width: 37.8125em) {
+	.align > li {
+		width: 100%;
+		min-height: 440px;
+		height: auto;
+		padding: 0;
+		margin: 0 0 30px 0;
+	}
+
+	.book {
+		margin: 0 auto;
+	}
+
+	figcaption {
+		text-align: center;
+		width: 320px;
+		top: 250px;
+		padding-left: 0;
+		left: -80px;
+		font-size: 90%;
+	}
+}
+.book-title{
+  padding-right: 20px;
+  padding-top: 40px;
+  padding-left: 20px;
+}
+.main-3{
+  float: right;
+ margin-right: 70px;
+}
+#rcorners2 {
+  border-radius: 25px;
+  border: 2px solid #73AD21;
+  padding: 20px;
+  width: inherit;
+  height: inherit;
+}
+#rcorners2-1 {
+  border-radius: 15px 50px 30px;
+  background: #73AD21;
+  padding: 20px;
+  width: inherit;
+  height:inherit;
+}
+#btn-center{
+  text-align: center;
+  border-bottom: 40px;
+}
+.fig-data{
+  border-bottom: 20px;
+}
+
+
+    </style>
+
+  </head>
+  <body class="bg-nav">
+    <nav class="navbar bg-dark shadow-lg">
+
+    <div class="left text-light"><a href="{{url_for('index')}}">HOME</a>
+      </div>
+
+       <div>
+          <h1 class="nav-brand text-light h">BOOK REVIEW BY FAISAL</h1>
+          </div>
+  <div class="right text-light">{{username}}   <a href="{{url_for('logout')}}"> LOG OUT</a></div>
+    </nav>
+    <div class="search">
+      <form class="form-inline " action="{{url_for('index')}}" method="POST">
+      <input class="form-control mr-2" type="text" placeholder="ISBN, AUTHOR, DATE OF THE BOOK" name="text" id="in">
+      <button class="btn btn-warning" type="submit">SEARCH</button>
+  </form>
+    </div>
+<br> <br> <br> <br>
+
+<div class='main-3 text-center bg-warning my-5 float-right' id="rcorners2">
+<h2 class=''>RATINGS FROM GOODREADS: </h2>
+<h1>{{average_rating}}</h1>
+<h5 class=''>TOTAL NUMBER OF REVIEWS: </h5>
+<h3>{{work_ratings_count}}</h3>
+</div>
+
+<figure class='book'>
+
+            <!-- Front -->
+
+            <ul class='paperback_front'>
+              <li>
+                <span class="ribbon">BOOK</span>
+                <img src="templates/bg.jpg" alt="" width="100%" height="100%">
+              </li>
+              <li class="book-title text-primary">{{data.title}}</li>
+            </ul>
+
+            <!-- Pages -->
+
+            <ul class='ruled_paper'>
+              <li></li>
+              <li>
+                <a class="btn" href="#">NO DATA AVAILIBLE</a>
+              </li>
+              <li>WELCOME</li>
+
+            </ul>
+
+            <!-- Back -->
+
+            <ul class='paperback_back'>
+              <li>
+                <img src="templates/bg.jpg" alt="" width="100%" height="100%">
+              </li>
+              <li></li>
+            </ul>
+            <figcaption class="fig-data">
+            <h2>Author:</h2>  <h3>{{data.author}}</h3>
+              <span class="text-warning">DETAILS</span>
+
+              <h4>Year:</h4><h6> {{data.year}}</h6>
+              <h4>Isbn:</h4><h6> {{data.isbn}}</h6>
+            </figcaption>
+          </figure>
+
+
+
+{% if reviews != None %}
+{% for x in reviews %}
+<div class='container bg-dark my-2 '>
+    <h6 class="text-light">Rating: {{x.rating}} of 5</h6>
+    <blockquote class="blockquote">
+    <p class="text-light">{{x.review}}</p>
+    <footer class="blockquote-footer text-warning">{{x.username}}</footer>
+    </blockquote>
+</div>
+{% endfor %}
+{% endif %}
+
+<div class="alert alert-warning alert-dismissible fade show" role="alert">
+<strong>{{warning}}</strong>
+<button type="button" class="close" data-dismiss="alert" aria-label="Close">
+<span aria-hidden="true">&times;</span>
+</button>
+</div>
+<div class='container bg-light my-2' id="rcorners2-1">
+    <form class='form-group ' action="{{url_for('bookpage',isbn=data.isbn)}}" method="POST">
+        <label class='text-primary'>Write your review...</label>
+        <select name="stars" class='m-1 bg-white' required>
+            <option selected value disabled> SELECT RATINGS </option>
+            <option value="1">1 star</option>
+            <option value="2">2 stars</option>
+            <option value="3">3 stars</option>
+            <option value="4">4 stars</option>
+            <option value="5">5 stars</option>
+        </select>
+        <textarea class='form-control' name='textarea'>
+        </textarea>
+        <input class='my-2  btn-lg shadow-lg bg-warning' type='submit' value='INSERT REVIEW' id="btn-center">
+    </form>
+</div>
+
+
+<footer class="page-footer font-small bg-dark">
+
+
+  <div class="footer-copyright text-center py-3">CLICK HERE FOR
+    <a href='/api/{{data.isbn}}'>API</a>
+  </div>
+
+
+</footer>
+
+<!-- Optional JavaScript -->
+<!-- jQuery first, then Popper.js, then Bootstrap JS -->
+<script src="https://code.jquery.com/jquery-3.4.1.slim.min.js" integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n" crossorigin="anonymous"></script>
+<script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js" integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6" crossorigin="anonymous"></script>
+</body>
+</html>

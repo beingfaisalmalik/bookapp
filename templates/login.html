@@ -1,0 +1,109 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+        <link rel="stylesheet" href="style.css">
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+
+    <title>REGISTER</title>
+    <style media="screen">
+    .bg-nav{
+      background: #396afc;  /* fallback for old browsers */
+      background: -webkit-linear-gradient(to bottom, #2948ff, #396afc);  /* Chrome 10-25, Safari 5.1-6 */
+      background: linear-gradient(to bottom, #2948ff, #396afc); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+
+
+
+
+
+    }
+    .mt-100{
+      margin-top: 100px;
+
+    }
+
+
+    </style>
+
+  </head>
+  <body class="bg-nav">
+    <nav class="navbar bg-dark shadow-lg">
+
+
+    <h1 class="nav-brand text-light">LOGIN AND REGISTER</h1>
+    </nav>
+    <div class="container">
+      <div class="alert alert-warning alert-dismissible fade show"  role="alert" onload="hide">
+  <strong>{{log_in_message}}</strong>
+  <button type="button" class="close" data-dismiss="alert" aria-label="Close">
+    <span aria-hidden="false">&times;</span>
+  </button>
+
+
+</div>
+
+      <div class="row">
+     <div class="col-md-8 text-light ">
+       <div class="card mt-3 bg-warning text-white shadow-lg">
+        <div class="card-body">
+        <form class="form" action="{{url_for('login')}}" method="post">
+          <label for="email">EMAIL</label><br>
+          <input type="email" type="email"  name="email"  class="form-control" required="required"><br>
+          <label for="password">PASSWORD</label><br>
+          <input type="password"  type="password" id='userPassword' onkeyup="passwordMatch()" name="userPassword" minlength="8" maxlength="15"  pattern="(?=.*\d)(?=.*[a-z])(?=.*[A-Z]).{8,}" title="Must contain at least one number and one uppercase and lowercase letter, and at least 8 or more characters" required="required" class="form-control" required="required"><br>
+          <label for="email">CONFIRM PASSWORD</label><br>
+          <input type="password" type="password" id='userPasswordRepeat' onkeyup="passwordMatch()" name="userPasswordRepeat" minlength="8" maxlength="15"   pattern="(?=.*\d)(?=.*[a-z])(?=.*[A-Z]).{8,}" title="Must contain at least one number and one uppercase and lowercase letter, and at least 8 or more characters" required="required" class="form-control" required="required"><br> <br>
+          <input type="submit" name="" value="REGISTER" class="btn-lg btn-block btn-dark" id='submitSignUpForm'>
+
+        </form>
+
+        </div>
+       </div>
+
+</div>
+
+
+     <div class="col-md-4">
+     <div class="card mt-100 bg-warning text-white h-60 shadow-lg">
+      <div class="card-body">
+      <form class="form" action="{{url_for('login')}}" method="post">
+        <label for="email">EMAIL</label><br>
+        <input type="email" type="email" name="emailLogIn"  class="form-control" required="required"><br>
+        <label for="password">PASSWORD</label><br>
+        <input type="password"   name="userPasswordLogIn" class="form-control" required="required"><br><br>
+        <input type="submit" name="" value="SUBMIT" class="btn-lg btn-block btn-dark" id='submitSignUpForm'>
+
+      </form>
+
+      </div>
+     </div>
+     </div>
+
+    </div>
+    </div>
+    <script>
+ function passwordMatch() {
+     var userPassword=$("#userPassword");
+     var userPasswordRepeat=$('#userPasswordRepeat');
+     if (userPassword.val().length>7 && (userPassword.val()===userPasswordRepeat.val())) {
+         userPassword.css("border","1px solid green");
+         userPasswordRepeat.css("border","1px solid green");
+         $('#submitSignUpForm').prop('disabled',false);
+     } else {
+         userPassword.css("border","1px solid red");
+         userPasswordRepeat.css("border","1px solid red");
+         $('#submitSignUpForm').prop('disabled',true);
+     }
+ }
+ </script>
+
+    <!-- Optional JavaScript -->
+    <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+    <script src="https://code.jquery.com/jquery-3.4.1.slim.min.js" integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js" integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6" crossorigin="anonymous"></script>
+  </body>
+</html>

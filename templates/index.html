@@ -1,0 +1,124 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+        <link rel="stylesheet" href="style.css">
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+    <link rel="stylesheet" href= "https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+
+    <title>REGISTER</title>
+    <style media="screen">
+
+.bg-nav{
+      background: #396afc;  /* fallback for old browsers */
+      background: -webkit-linear-gradient(to bottom, #2948ff, #396afc);  /* Chrome 10-25, Safari 5.1-6 */
+      background: linear-gradient(to bottom, #2948ff, #396afc); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+    }
+.right{
+  float: right;
+
+}
+.left{
+  float: left;
+  padding-right: 5px;
+  margin-right: 10px;
+
+}
+.search{
+  text-align: center;
+  margin-left: 350px;
+  margin-top: 100px;
+  margin-right: 100px;
+
+}
+#in{
+  width: 600px;
+}
+.top{
+  margin-bottom: 50px;
+  margin-top: 50px;
+}
+.list-group-item:hover{
+  background-color: #ffff00;
+  color: #212121;
+}
+.list-group{
+  background-color: #212121;
+}
+.card-header:hover{
+  background-color: white;
+
+}
+#cd{
+  box-shadow: 6px 6px 6px black;
+  padding: 20px;
+  width: inherit;
+  height:inherit;
+    border-radius: 15px 50px 30px;
+}
+
+
+    </style>
+
+  </head>
+  <body class="bg-nav">
+    <nav class="navbar bg-dark shadow-lg">
+
+    <div class="left text-light"><a href="{{url_for('index')}}">HOME</a>
+      </div>
+
+       <div>
+          <h1 class="nav-brand text-light h">BOOK REVIEW BY FAISAL</h1>
+          </div>
+  <div class="right text-light">{{username}}   <a href="{{url_for('logout')}}"> LOG OUT</a></div>
+    </nav>
+    <div class="search">
+      <form class="form-inline " action="{{url_for('index')}}" method="POST">
+      <input class="form-control mr-2" type="text" placeholder="ISBN, AUTHOR, DATE OF THE BOOK" name="text" id="in">
+      <button class="btn btn-warning" type="submit">SEARCH</button>
+  </form>
+    </div>
+    <main class="top shadow-lg ">
+        <div class='container bg-light h-25 p-3'>
+            <h3 class='text-center p-3 shadow-lg bg-color:#fff00;'>{{ message }}</h3>
+            <div class="container">
+
+            <div class="row">
+
+                  {% for x in data %}
+                <div class="col-md-3">
+
+
+                  <div class="con">
+                      <a href='/isbn/{{x.isbn}}'>
+                  <div class="card text-white bg-dark mb-3 border-primary shadow-lg " style="max-width: 18rem;" id="cd">
+                    <div class="card-header text-primary"><h1>{{x.title}}</h1></div>
+                    <div class="card-body">
+                      <h5 class="card-title">ISBN NUMBER OF THIS BOOK: {{x.isbn}}</h5>
+                      <p class="card-text text-warning">THIS BOOK IS BY  {{x.author}} WRITTEN IN  {{x.year}}</p>
+                    </div>
+                  </div></a>
+              </div>
+
+
+                </div>
+                  {% endfor %}
+            </div>
+
+        </div>
+
+        </div>
+    </main>
+
+
+
+    <!-- Optional JavaScript -->
+    <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+    <script src="https://code.jquery.com/jquery-3.4.1.slim.min.js" integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js" integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6" crossorigin="anonymous"></script>
+  </body>
+</html>
